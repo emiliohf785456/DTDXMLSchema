@@ -1,0 +1,16 @@
+XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<dominio 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+  xs:noNamespaceSchemaLocation="416_dominio.xsd">w3c.org</dominio>
+
+416_dominio.xsd
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dominio" type="nombre-dominio" />
+
+  <xs:simpleType name="nombre-dominio">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z0-9][a-z0-9\-]{0,61}[a-z0-9]\.[a-z]{2,3}" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
